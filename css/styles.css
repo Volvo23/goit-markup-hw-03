@@ -1,3 +1,24 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  /* outline: 2px solid rgb(51, 18, 128); */
+  /* none - щоб забрати рамку */
+}
+
+img {
+  display: block;
+}
+
 :root {
   --primary-text-color: rgba(117, 117, 117, 1);
   --title-text-color: rgba(33, 33, 33, 1);
@@ -34,7 +55,7 @@ body {
   font-style: normal;
   font-weight: bold;
   font-size: 26px;
-  line-height: 31px;
+  line-height: 1.19;
   /* identical to box height */
 
   letter-spacing: 0.03em;
@@ -50,11 +71,21 @@ body {
 
 /* NAVIGATION */
 
+.special-link {
+  color: rgba(33, 150, 243, 1);
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
 .nav-menu .link {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
   text-decoration: none;
@@ -70,7 +101,7 @@ body {
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.02em;
 }
 
@@ -79,54 +110,82 @@ body {
   color: var(--text-hover-focus);
 }
 
-/* MAIN */
+/* HERO */
 
 .main-section {
   background: var(--main-footer-background-color);
+  text-align: center;
 }
 
 .main-title {
   font-size: 44px;
   font-style: normal;
   font-weight: 900;
-  line-height: 60px;
+  line-height: 1.36;
   letter-spacing: 0.06em;
-  text-align: center;
-
+  /* text-align: center; */
   text-transform: uppercase;
   color: var(--secondary-text-color);
-}
-
-.section-title {
-  color: var(--title-text-color);
+  margin-bottom: 40px;
+  padding-top: 200px;
 }
 
 .button {
+  /* margin-left: auto;
+  margin-right: auto; */
+  display: inline-block;
+  min-width: 200px;
+  height: 50px;
+  padding: 10px 32px;
+
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
-  line-height: 30px;
-  display: flex;
-  align-items: center;
+  line-height: 1.875;
+  /* display: flex;
+  align-items: center; */
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--white-color);
   background: var(--text-hover-focus);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  margin-bottom: 200px;
 }
 
 /* СЕКЦІЯ 1 */
+
+.container {
+  min-width: 1170px;
+  padding-left: 215px;
+  padding-right: 215px;
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+
+.qualities .list {
+  display: flex;
+}
+
+.container .list:not(:last-child) {
+  margin-right: 30px;
+}
+
+.section-title {
+  margin-bottom: 50px;
+  color: var(--title-text-color);
+}
 
 .section-info {
   color: var(--primary-text-color);
 }
 
 .qualities .section-title {
+  margin-bottom: 10px;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
@@ -135,33 +194,53 @@ body {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.71;
   /* or 171% */
   letter-spacing: 0.03em;
 }
 
-/* СЕКЦІЯ 2 */
-.projects .section-title {
+/* Чем мы занимаемся */
+.projects-title {
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
-  line-height: 42px;
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 50px;
+  color: var(--title-text-color);
 }
 
-/* СЕКЦІЯ 3 */
-.ourteam .main {
+/* Наша команда */
+.ourteam-title {
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
-  line-height: 42px;
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 50px;
+  color: var(--title-text-color);
+}
+
+.ourteam .section-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  margin-bottom: 10px;
 }
 
 .ourteam {
   background: rgba(245, 244, 250, 1);
+}
+
+.ourteam .img {
+  margin-bottom: 30px;
 }
 
 /* ПІДВАЛ*/
@@ -175,13 +254,14 @@ body {
   font-style: normal;
   font-weight: bold;
   font-size: 26px;
-  line-height: 31px;
+  line-height: 1.19;
   /* identical to box height */
 
   letter-spacing: 0.03em;
 
   color: #2196f3;
   text-decoration: none;
+  margin-bottom: 20px;
 }
 
 .logo {
@@ -192,21 +272,26 @@ body {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.71;
   /* or 171% */
 
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
+  margin-bottom: 9px;
 }
 
 .foooter-info {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.71;
   /* or 171% */
   text-decoration: none;
   letter-spacing: 0.03em;
 
   color: var(--footer-text);
+}
+
+.mmail {
+  margin-bottom: 9px;
 }
