@@ -40,6 +40,32 @@ body {
 
 
 /* ЛОГО */
+.header {
+  background-color: var(--white-color);
+  font-family: Roboto, sans-serif;
+  margin: 0 auto;
+}
+.container-header {
+  display: flex;
+  align-items: flex-start;
+  width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+.container-header-nav{
+  display: flex;
+  
+}
+nav ul li:not(:last-child) {
+  margin-right: 50px;
+ 
+}
+
 .webstudio {
   width: 145px;
   height: 31px;
@@ -49,14 +75,20 @@ body {
   font-style: normal;
   font-weight: bold;
   font-size: 26px;
-  line-height: 31px;
-  /* identical to box height */
+  line-height: 1.192;
+ text-decoration: none;
+ margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
 
   letter-spacing: 0.03em;
 }
 
 .studio {
   color: #2196f3;
+}
+.header-list{
+  display: flex;
 }
 
 /* НАВІГАЦІЯ */
@@ -67,18 +99,24 @@ body {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.143;
   letter-spacing: 0.02em;
+  position: initial;
+  
 }
 
-.link {
+.header-list .link {
   color: var(--title-text-color);
   text-decoration: none;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.143;
   letter-spacing: 0.02em;
+  text-decoration: none;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .link:hover,
@@ -91,14 +129,31 @@ body {
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.02em;
+  margin-left: 50px;
 }
 
 .auth-item:hover,
 .auth-item:focus {
   color: var(--text-hover-focus);
 }
+.auth-nav.list {
+ display: flex;
+  margin-left: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* Блок з фотками */
 
 .list-global {
