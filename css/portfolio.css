@@ -5,110 +5,84 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;}
-* {margin: 0;
-  padding: 0;}
+  box-sizing: inherit;
+}
 
-img{
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
   display: block;
 }
+
 /* SETTINGS */
 :root {
   --main-text-color: rgba(117, 117, 117, 1);
   --title-text-color: rgba(33, 33, 33, 1);
   --text-hover-focus: rgba(33, 150, 243, 1);
   --white-text-background: rgba(255, 255, 255, 1);
-   --background-grey-color: #f5f4fa;
 }
 
 body {
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.03em;
   background-color: var(--white-text-background);
-  width: 1600px;
-
- /* font-size: 14px; 
- font-colour */
- 
+  color: var(--main-text-color);
+  max-width: 1600px;
 }
 
-.list-button{
+.list {
   list-style: none;
-  font-size: 0;
 }
-/* Шапка */
 
+.header {
+  border-bottom: 1px solid #ececec;
+}
 
 /* ЛОГО */
-.header{
-  padding-top: 24px;
-  padding-bottom: 25px;
-}
-.container{
-  width: 1200px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin: 0 auto;
-  
-}
-.container-header {
-  display: flex;
-  align-items: center;
-   border-bottom: 1px solid #ececec;
-}
-.container-header-nav{
-  display: flex;
-  align-self: center;
-  
-}
 
 .webstudio {
+  width: 145px;
+  height: 31px;
   color: #000000;
+  text-decoration: none;
   font-family: "Raleway", sans-serif;
+  font-style: normal;
   font-weight: bold;
   font-size: 26px;
-  line-height: 1.192;
- text-decoration: none;
- margin-right: 93px;
+  line-height: 31px;
+  /* identical to box height */
+
+  letter-spacing: 0.03em;
+  margin-right: 93px;
 }
 
 .studio {
   color: #2196f3;
 }
-.header-list{
-  display: flex;
-  
-  
-}
-.list{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  
-}
+
 /* НАВІГАЦІЯ */
 
-.link {
+.special-link {
   color: rgba(33, 150, 243, 1);
   text-decoration: none;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.143;
+  line-height: 16px;
   letter-spacing: 0.02em;
-  
-  
-  
 }
 
-.header-list .link {
+.link {
   color: var(--title-text-color);
   text-decoration: none;
+  font-style: normal;
   font-weight: 500;
-  line-height: 1.143;
+  font-size: 14px;
+  line-height: 16px;
   letter-spacing: 0.02em;
-  
-  
 }
 
 .link:hover,
@@ -120,7 +94,8 @@ body {
   color: var(--main-text-color);
   text-decoration: none;
   font-weight: 500;
-  line-height: 1.14;
+  font-size: 14px;
+  line-height: 16px;
   letter-spacing: 0.02em;
 }
 
@@ -128,147 +103,63 @@ body {
 .auth-item:focus {
   color: var(--text-hover-focus);
 }
-.auth-nav.list {
- display: flex;
+
+.container {
+  width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+}
+
+.header-container {
+  display: flex;
+  align-items: flex-start;
+  align-items: center;
+}
+
+.header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+
+.nav-menu {
+  display: flex;
+}
+
+.auth-nav {
+  display: flex;
   margin-left: auto;
 }
 
-.header-line:not(:last-child) {
+nav ul li:not(:last-child) {
   margin-right: 50px;
 }
 
-
-
-
-
-
-
-
-
-
-
-.portfolio-list {
-  display: flex;
-  flex-wrap: wrap;
-  
+.auth-item {
+  margin-left: 50px;
 }
-
-
-/* Блок з фотками */
-.section-global{
-  padding: 94px;
-  padding-bottom: 94px;
-}
-
-.list-global {
-
-  /* width: 1200; */
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-.list-global .list{
-  font-size: 0;
-  /* display: block; */
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;}
-  .list-item:not(:nth-child(n + 7)) {
-  margin-bottom: 30px;
-  
-
-
-}
-/* ul {
-  list-style: none;
-  display: flex; */
-}
-.list-item {
-  display: block;
-  width: 370px;
-  background: #FFFFFF;
-  border: 1px solid #EEEEEE;6666666666666666
-}
-/* .list-item:not(:nth-child(3n)) {
-  margin-right: 30px;
-} */
-
-
-}
-.list-global .list {
-  /* list-style: 0;
-  padding-bottom: 82;
-  margin: 000;
-  padding: 0; */
-}
-
-
-.list-global .list-item {
-  width: calc((100% - 2 * 30px) / 3);
-  /* margin-right: 30px;
-  margin-bottom: 30px; */
-}
-.section-title{
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-  color: var(--main-text-color);
- 
- 
-}
-.section-info{
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.87;
-  color: var(--secondary-text-color);
-  letter-spacing: 0.03em;
- 
-}
-/* .list-global .list .image {
-  margin-bottom: 20px;
-} */
 
 /* Кнопки */
-.container .portfolio-list {
-    display: flex;
-  align-content: center;
-  justify-content: center;
-  padding-bottom: 50px;
-}
-
-.button-list {
-  background-color: none;
-  
-  
-}
 
 .button {
-  display: inline-block;
-  font-family: "Roboto", sans-serif;
+  width: 145px;
+  height: 38px;
+  left: 712px;
+  top: 174px;
+  background: rgba(245, 244, 250, 1);
+  border-radius: 4px;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.625;
-  text-align: center;
-  color: var(--main-text-color);
-  border: none;
-  background-color: var(--background-grey-color);
-  border-radius: 4px;
-  padding: 6px 22px;
+  line-height: 26px;
+  /* identical to box height, or 162% */
   color: var(--title-text-color);
-  
-}
-.portfolio-list .button:not(:last-child) {
-  margin-right: 8px;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+  border: none;
 }
 
-.portfolio-list .button {
-  margin-left: 8px;
-}
 .button:hover,
 .button:focus {
   background: var(--text-hover-focus);
@@ -278,68 +169,90 @@ body {
 .button:focus {
   color: var(--white-text-background);
 }
-.portfolio-pictures .image{
-  width: calc((100% - 2 * 30px) / 3);
-  margin-right: 30px;
+
+.main-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.button-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.lii-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+/* MAIN */
+
+.section-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 36px;
+  /* identical to box height, or 200% */
+  color: var(--title-text-color);
+  letter-spacing: 0.06em;
+}
+
+.section-info {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  /* identical to box height, or 187% */
+  color: var(--main-text-color);
+  letter-spacing: 0.03em;
+}
+
+.projects .list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.li-item {
+  display: block;
+  width: 370px;
+  /* height: 368px; */
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+}
+
+.li-item:not(:nth-child(n + 7)) {
   margin-bottom: 30px;
 }
-.portfolio-discription{
-  padding-top: 20px;
+
+.projects-info {
+  margin: 0 24px;
   padding-bottom: 20px;
-  border-left: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-
+  padding-top: 20px;
 }
-.section-title{
-  ont-family: Roboto;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: 36px;
-/* identical to box height, or 200% */
-
-letter-spacing: 0.06em;
-
-color: #212121;
-}
-.section-info{
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 30px;
-/* identical to box height, or 187% */
-
-letter-spacing: 0.03em;
-
-color: #757575;
-
-}
-/* Main */
 
 /* Підвал */
 
 .footer {
   background: rgba(47, 48, 58, 1);
-   padding-left: 215px;
   padding-top: 60px;
   padding-bottom: 60px;
-  padding-right: 1154px;
 }
 
 .webstudio-footer {
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 26px;
-  line-height: 1.19;
+  line-height: 31px;
   /* identical to box height */
 
   letter-spacing: 0.03em;
 
   color: #2196f3;
   text-decoration: none;
-  display: inline-block;
   margin-bottom: 20px;
 }
 
@@ -348,6 +261,7 @@ color: #757575;
 }
 
 .street {
+  display: inline-block;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -356,20 +270,11 @@ color: #757575;
 
   letter-spacing: 0.03em;
   color: var(--white-text-background);
-  display: inline-block;
-}
-.footer-mail{
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  /* or 171% */
-  text-decoration: none;
-  letter-spacing: 0.03em;
-  display: inline-block;
   margin-bottom: 9px;
 }
+
 .foooter-info {
+  display: inline-block;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -379,6 +284,19 @@ color: #757575;
   letter-spacing: 0.03em;
 
   color: rgba(255, 255, 255, 0.6);
-  display: inline-block;
+}
 
+.mmail {
+  display: inline-block;
+  margin-bottom: 9px;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.adress-footer {
+  display: flex;
+  flex-direction: column;
 }
